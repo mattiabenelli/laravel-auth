@@ -26,7 +26,11 @@
                     <td>{{ $item->title }}</td>
                     <td>{{ $item->content }}</td>
                     <td>{{ $item->slug }}</td>
-                    <td></td>
+                    <td>
+                        <a class="btn btn-sm btn-square btn-primary" href="{{ route('admin.projects.show', $item->slug)}}" title="Visualizza progetto">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
