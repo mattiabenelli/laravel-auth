@@ -27,9 +27,14 @@
                     <td>{{ $item->content }}</td>
                     <td>{{ $item->slug }}</td>
                     <td>
-                        <a class="btn btn-sm btn-square btn-primary" href="{{ route('admin.projects.show', $item->slug)}}" title="Visualizza progetto">
-                            <i class="fas fa-eye"></i>
-                        </a>
+                        <div class="d-flex">
+                            <a class="btn btn-sm btn-square btn-primary" href="{{ route('admin.projects.show', $item->slug)}}" title="Visualizza progetto">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a class="btn btn-sm btn-square btn-warning" href="{{ route('admin.projects.edit', $item->slug)}}" title="Modifica progetto">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                        </div>
                     </td>
                 </tr>
             @endforeach
